@@ -160,22 +160,14 @@ Os testes implementados cobrem soma, subtração, multiplicação, divisão inte
 
 # 13. Refatoração e Versionamento
 
-O Git portátil está disponível no perfil do usuário. Esta versão inicial usa condicionais para selecionar as operações e será preservada na branch `main`. Na branch `Refatoracao`, a seleção será simplificada com `switch` e a divisão será extraída para um método privado, mantendo o mesmo comportamento.
+O repositório local possui duas branches:
 
-Para criar o histórico solicitado, registre esta versão funcional na branch principal e depois crie a branch de refatoração:
+- `main`: implementação funcional inicial, usando condicionais para selecionar as operações; commit `1530b81` (`feat: implementa calculadora e testes`).
+- `Refatoracao`: seleção simplificada com `switch` e divisão extraída para um método privado; os testes foram executados novamente com sucesso.
 
-```powershell
-& "$env:LOCALAPPDATA\Programs\FinancAppTools\git\cmd\git.exe" init -b main
-& "$env:LOCALAPPDATA\Programs\FinancAppTools\git\cmd\git.exe" config user.name "Nicolas Godoy"
-& "$env:LOCALAPPDATA\Programs\FinancAppTools\git\cmd\git.exe" config user.email "SEU_EMAIL_REAL"
-& "$env:LOCALAPPDATA\Programs\FinancAppTools\git\cmd\git.exe" add .
-& "$env:LOCALAPPDATA\Programs\FinancAppTools\git\cmd\git.exe" commit -m "feat: implementa calculadora e testes"
-& "$env:LOCALAPPDATA\Programs\FinancAppTools\git\cmd\git.exe" switch -c Refatoracao
-```
+As duas versões passaram pelos 7 testes. O repositório remoto foi criado no GitHub e está configurado neste projeto.
 
-Depois de realizar a refatoração na branch `Refatoracao`, rode `mvn clean test` novamente e registre a alteração em um novo commit. Não foi criado nem verificado repositório remoto.
-
-**Link do repositório GitHub:** pendente de criação do repositório remoto.
+**Link do repositório GitHub:** https://github.com/Nigodoy250107/projeto_calculadora
 
 ---
 
@@ -184,5 +176,3 @@ Depois de realizar a refatoração na branch `Refatoracao`, rode `mvn clean test
 O código-fonte, configuração Maven, testes e JavaDoc foram preparados e validados. Para completar a entrega, ainda é necessário:
 
 - capturar e adicionar os prints reais dos testes e da documentação;
-- criar os commits e a branch `Refatoracao` após aplicar e validar as melhorias;
-- criar/configurar o remoto no GitHub e inserir seu link verdadeiro.
