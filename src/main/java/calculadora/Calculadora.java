@@ -25,22 +25,19 @@ public class Calculadora {
             throw new IllegalArgumentException("Operador inválido: null");
         }
 
-        if (op.equals("+")) {
-            return a + b;
-        }
-        if (op.equals("-")) {
-            return a - b;
-        }
-        if (op.equals("*")) {
-            return a * b;
-        }
-        if (op.equals("/")) {
-            if (b == 0) {
-                throw new ArithmeticException("Não é possível dividir por zero.");
-            }
-            return a / b;
-        }
+        return switch (op) {
+            case "+" -> a + b;
+            case "-" -> a - b;
+            case "*" -> a * b;
+            case "/" -> dividir(a, b);
+            default -> throw new IllegalArgumentException("Operador inválido: " + op);
+        };
+    }
 
-        throw new IllegalArgumentException("Operador inválido: " + op);
+    private int dividir(int dividendo, int divisor) {
+        if (divisor == 0) {
+            throw new ArithmeticException("Não é possível dividir por zero.");
+        }
+        return dividendo / divisor;
     }
 }
