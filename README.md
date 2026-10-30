@@ -165,7 +165,7 @@ O repositório local possui duas branches:
 - `main`: implementação funcional inicial, usando condicionais para selecionar as operações; commit `1530b81` (`feat: implementa calculadora e testes`).
 - `Refatoracao`: seleção simplificada com `switch` e divisão extraída para um método privado; testes executados novamente com sucesso.
 
-As duas versões passaram pelos 7 testes. O Git portátil foi usado localmente e a identidade do commit foi configurada com os dados do aluno. Ainda não há remoto GitHub configurado.
+As duas versões passaram pelos 7 testes. O repositório remoto foi criado no GitHub e está configurado neste projeto.
 
 Para conferir o histórico local:
 
@@ -174,7 +174,7 @@ Para conferir o histórico local:
 & "$env:LOCALAPPDATA\Programs\FinancAppTools\git\cmd\git.exe" log --oneline --all
 ```
 
-**Link do repositório GitHub:** pendente de criação do repositório remoto.
+**Link do repositório GitHub:** https://github.com/Nigodoy250107/projeto_calculadora
 
 ---
 
@@ -183,4 +183,3 @@ Para conferir o histórico local:
 O código-fonte, configuração Maven, testes e JavaDoc foram preparados e validados. Para completar a entrega, ainda é necessário:
 
 - capturar e adicionar os prints reais dos testes e da documentação;
-- criar/configurar o remoto no GitHub e inserir seu link verdadeiro.
