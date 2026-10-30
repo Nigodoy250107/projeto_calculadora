@@ -101,6 +101,12 @@ projeto_calculadora/
 ├── scripts/
 │   ├── generate-javadoc.ps1
 │   └── test.ps1
+├── images/
+│   ├── testes/
+│   │   ├── testes-main.png
+│   │   └── testes-refatoracao.png
+│   └── javadoc/
+│       └── javadoc-calculadora.png
 ├── pom.xml
 ├── README.md
 └── .gitignore
@@ -152,9 +158,17 @@ A documentação foi gerada com JDK 17.0.20.1. A página inicial está em [`docs
 
 Os testes implementados cobrem soma, subtração, multiplicação, divisão inteira, divisão por zero, operador inválido e operador nulo.
 
-**Print da execução dos testes:** pendente de captura de tela do terminal. O relatório textual real está em `target/surefire-reports/calculadora.TesteCalculadora.txt`.
+**Testes na branch `main`:** 7 testes, 0 falhas e 0 erros.
 
-**Print da documentação JavaDoc:** pendente de captura de tela no navegador. A documentação HTML real está em `docs/index.html`.
+![Relatório JUnit da branch main](images/testes/testes-main.png)
+
+**Testes na branch `Refatoracao`:** 7 testes, 0 falhas e 0 erros.
+
+![Relatório JUnit da branch Refatoracao](images/testes/testes-refatoracao.png)
+
+**Documentação JavaDoc:** página da classe `Calculadora`, gerada em `docs/index.html`.
+
+![Página JavaDoc da classe Calculadora](images/javadoc/javadoc-calculadora.png)
 
 ---
 
@@ -180,6 +194,4 @@ Para conferir o histórico local:
 
 # 14. Entrega e Pendências
 
-O código-fonte, configuração Maven, testes e JavaDoc foram preparados e validados. Para completar a entrega, ainda é necessário:
-
-- capturar e adicionar os prints reais dos testes e da documentação;
+O código-fonte, configuração Maven, testes, JavaDoc e capturas de evidência estão incluídos no repositório.
